@@ -44,7 +44,7 @@ export default function Navbar() {
                         size={20}
                       />
                     </button>
-                    <div className="invisible bg-black flex flex-col gap-4 group-hover:visible absolute left-1 p-5 top-10 rounded-2xl opacity-95">
+                    <div className="invisible bg-black flex flex-col gap-4 group-hover:visible absolute left-1 p-5 top-full rounded-2xl opacity-95">
                       <Link
                         href={"/categories/Romantic"}
                         className="text-white text-sm block "

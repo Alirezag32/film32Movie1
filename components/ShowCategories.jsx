@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 export default function ShowCategory({ category }) {
           const [pageNumber , setPageNumber] = useState(1)
-        const image = show.image?.original || "/spiderman.jpg";
+        
           const paginationNumbers = Math.ceil(category.length / 20);
           const [fromToTo, setFromToTo] = useState(category.slice(0, 20));
           const [from, setFrom] = useState(0)
@@ -21,8 +21,7 @@ export default function ShowCategory({ category }) {
             <div className="">
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
                 {fromToTo.map((show) => {
-                  {
-                  }
+                  const image = show.image?.original || "/spiderman.jpg";
                   return (
                     <div key={show.id} className="relative ">
                       <Link
