@@ -13,7 +13,7 @@ export default function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [categoryFlage , setCategoryFlage] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(
-    localStorage.getItem("email") ? true : false,
+    localStorage?.getItem("email") ? true : false,
   );
         if (pathName === "/login" || pathName === "/register") {
             return null;
