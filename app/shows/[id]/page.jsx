@@ -4,8 +4,9 @@ import Link from 'next/link';
  
 export default async function ShowPage({ params }) {
           const { id } = await params;
-           const image = show.image?.original || "/spiderman.jpg";
-          const show = ShowById( Number(id));
+           
+  const show = ShowById(Number(id));
+  const image = show.image?.original || "/spiderman.jpg";
           
           return (
             <section className=" w-full min-h-screen ">

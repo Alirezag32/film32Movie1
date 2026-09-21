@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import "swiper/css";
 export default function CategoryCrousel({ categoryName }) {
-  const image = show.image?.original || "/spiderman.jpg";
+ 
+ 
   return (
     <div className=" w-full  border-b-2 border-b-mauve-700 pb-6">
       <div className="flex justify-between my-5 mx-2">
@@ -34,6 +35,7 @@ export default function CategoryCrousel({ categoryName }) {
         {CategoryName(categoryName)
           .slice(0, 10)
           .map((show) => {
+             const image = show.image?.original || "/spiderman.jpg";
             
             return (
               <SwiperSlide key={show.id}>

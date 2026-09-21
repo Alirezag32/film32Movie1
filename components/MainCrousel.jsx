@@ -6,7 +6,7 @@ import { Autoplay , Pagination } from "swiper/modules";
 import "swiper/css";
 import { SwiperSlide, Swiper } from "swiper/react";
 export default function MainCrousel() {
-  const image = show.image?.original || "/spiderman.jpg";
+ 
   const shows = PopularMovies();
   
           
@@ -19,7 +19,11 @@ export default function MainCrousel() {
                 autoplay={{ delay: 3000 }}
                 pagination = {{clickable : true}}
               >
-                                        {shows.slice(0, 5).map((show) => {
+                {shows.slice(0, 5).map((show) => {
+                                             const image =
+                                               show.image?.original ||
+                                               "/spiderman.jpg";
+
                      
                                           return (
                                             <SwiperSlide

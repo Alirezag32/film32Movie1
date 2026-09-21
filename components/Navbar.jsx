@@ -47,25 +47,25 @@ export default function Navbar() {
                     <div className="invisible bg-black flex flex-col gap-4 group-hover:visible absolute left-1 p-5 top-10 rounded-2xl opacity-95">
                       <Link
                         href={"/categories/Romantic"}
-                        className="text-white text-sm "
+                        className="text-white text-sm block "
                       >
                         Romantic
                       </Link>
                       <Link
                         href={"/categories/Action"}
-                        className="text-white text-sm "
+                        className="text-white text-sm block "
                       >
                         Action
                       </Link>
                       <Link
                         href={"/categories/Horror"}
-                        className="text-white text-sm "
+                        className="text-white text-sm block "
                       >
                         Horror
                       </Link>
                       <Link
                         href={"/categories/Drama"}
-                        className="text-white text-sm "
+                        className="text-white text-sm block "
                       >
                         Drama
                       </Link>

@@ -1,8 +1,11 @@
 "use client"
 import Link from "next/link";
 import { redirect, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 export default function Profile() {
+          const [userEmail, setUserEmail] = useState("")
+          const [userName, setUserName] = useState("")
+          
           function Logouthandeler() {
                      localStorage.setItem("name", "");
                      localStorage.setItem("email" , "");
@@ -11,6 +14,11 @@ export default function Profile() {
 
           const router = useRouter();
           useEffect(() => {
+                    const email = localStorage.getItem("email");
+                    setUserEmail(email)
+                    const name = localStorage.getItem("name")
+                    setUserName(name)
+
                               if (localStorage.getItem("name")) {
                                         router.replace("/")
                               }
@@ -22,28 +30,28 @@ export default function Profile() {
              <div className="flex flex-col item-center justify-center ">
                <div className="flex flex-col gap-4">
                  <div className="bg-fuchsia-900 rounded-full w-10 h-10 text-center text-3xl text-white ">
-                   {localStorage.getItem("name")?.charAt(0)}
+                   {userName?.charAt(0)}
                  </div>
                  <div className="flex flex-col gap-2">
                    <div className="text-white text-2xl">
-                     {localStorage.getItem("name")}
+                     {userName}
                    </div>
                    <div className="text-gray-600 text-sm">
                      {" "}
-                     {localStorage.getItem("email")}
+                     {userEmail}
                    </div>
                  </div>
                </div>
                <div className="bg-zinc-800 rounded-3xl flex flex-col gap-6 p-5 mt-3">
                  <div className="text-gray-700">Name</div>
                  <div className="text-white text-xl">
-                   {localStorage.getItem("name")}
+                   {userName}
                  </div>
                </div>
                <div className="bg-zinc-800 rounded-3xl flex flex-col gap-2 p-5 mt-3 w-75">
                  <div className="text-gray-700">email</div>
                  <div className="text-white text-xl">
-                   {localStorage.getItem("email")}
+                   {userEmail}
                  </div>
                </div>
                <div className="flex gap-2 justify-center items-center mt-6">
