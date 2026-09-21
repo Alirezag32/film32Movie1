@@ -23,16 +23,16 @@ export default function ShowCategory({ category }) {
                 {fromToTo.map((show) => {
                   const image = show.image?.original || "/spiderman.jpg";
                   return (
-                    <div key={show.id} className="relative ">
+                    <div key={show.id} className="relative  ">
                       <Link
                         className="block w-full h-full"
                         href={`/shows/${show.id}`}
                       >
                         <Image
-                          className="rounded-2xl border-2 border-gray-900 object-cover "
+                          className="rounded-2xl h-[300px] border-2 border-gray-900 object-cover "
                           src={image}
                           width={300}
-                          height={300}
+                          height={400}
                           alt={show.name}
                         />
                         <div className="absolute bottom-1/10 left-1">

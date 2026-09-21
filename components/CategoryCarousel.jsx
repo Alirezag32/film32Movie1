@@ -45,7 +45,7 @@ export default function CategoryCrousel({ categoryName }) {
                     href={`/shows/${show.id}`}
                   >
                     <Image
-                      className="rounded-2xl border-2 border-gray-900 object-cover "
+                      className="rounded-2xl h-[300px] border-2 border-gray-900 object-cover "
                       src={image}
                       width={200}
                       height={200}

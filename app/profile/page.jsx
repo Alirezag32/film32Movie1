@@ -19,7 +19,7 @@ export default function Profile() {
                     const name = localStorage.getItem("name")
                     setUserName(name)
 
-                              if (localStorage.getItem("name")) {
+                              if (!localStorage.getItem("name")) {
                                         router.replace("/")
                               }
                     },[router])
