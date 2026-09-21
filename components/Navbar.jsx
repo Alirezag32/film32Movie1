@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { HiMenu, HiX } from "react-icons/hi";
-import { useState , } from "react";
+import { useEffect, useState , } from "react";
 import { FaBell, FaSearch } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
@@ -13,8 +13,12 @@ export default function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [categoryFlage , setCategoryFlage] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(
-    localStorage?.getItem("email") ? true : false,
+    false
   );
+  useEffect(() => {
+    const email = localStorage?.getItem("email") 
+      setIsLoggedIn(!!email)
+  }, [])
         if (pathName === "/login" || pathName === "/register") {
             return null;
         } else {
